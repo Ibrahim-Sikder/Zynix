@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Input } from '@nextui-org/react';
 import Image from 'next/image';
 import '../signup/signup.css'
+import { signIn } from 'next-auth/react';
 const Login = () => {
     return (
         <div>
@@ -11,7 +12,7 @@ const Login = () => {
                 <div className="text-center">
                     <h3 className="text-3xl font-bold text-center mb-5  capitalize">Hello</h3>
                     <span>
-                        Sign In Zynax or <b className="border-b-2 border-[#00AB55]">create an account </b>
+                        Sign In ZynIx or <b className="border-b-2 border-[#00AB55]">create an account </b>
                     </span>
                 </div>
                 <form className="businessFormWrap">
@@ -33,7 +34,9 @@ const Login = () => {
                                 height='50'
                             /> <span>Continoue With Google </span>{' '}
                         </button>
-                        <button className="signupBtn loginBtn bg-[#3F63AB] text-white ">
+                        <button 
+                      
+                        className="signupBtn loginBtn bg-[#3F63AB] text-white ">
                             <FaFacebookF className="mr-5" size={25} /> <span>Continoue With Facebook </span>{' '}
                         </button>
                     </div>

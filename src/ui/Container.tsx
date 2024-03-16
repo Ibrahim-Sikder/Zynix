@@ -1,5 +1,5 @@
 import { TContainer } from "@/types";
-import { cn } from "@/utils";
+import { cn } from "@/utils/cn";
 
 
 

@@ -1,9 +1,14 @@
+'use client'
+
+
 import './signup.css';
 import google from '../../assets/images/google.png'
 import { FaFacebookF } from "react-icons/fa6";
 import Link from 'next/link';
 import { Input } from '@nextui-org/react';
 import Image from 'next/image';
+import { signIn } from 'next-auth/react';
+import { FaGithub } from 'react-icons/fa';
 
 
 const Signup = () => {
@@ -12,7 +17,7 @@ const Signup = () => {
     return (
         <div className="">
             <div className="signupWrap">
-                <h3 className="text-3xl font-bold text-center mb-5  capitalize">Create a Zynax Account </h3>
+                <h3 className="mb-5 text-3xl font-bold text-center capitalize">Create a Zynax Account </h3>
                 <div className="flex lg:justify-end md:justify-center">
                     <Link href='/register'><span>Create a <b className='border-b-2 border-[#00AB55]'>business account</b> </span></Link>
                 </div>
@@ -42,9 +47,14 @@ const Signup = () => {
                         <div>or</div>
                         <div className="line"></div>
                     </div>
-                    <div className='lg:mt-0 mt-5    '>
-                        <button className='signupBtn mb-5 text-black  '>
+                  
+                    <div className='mt-5 lg:mt-0 '>
+                        <button
+
+                            className='mb-5 text-black signupBtn '>
+
                             <Image
+
                                 src={google}
                                 alt='google'
                                 width='50'
@@ -52,9 +62,16 @@ const Signup = () => {
                             />
 
 
-                            <span>Continoue With Google </span> </button>
-                        <button className='signupBtn bg-[#3F63AB] text-white '><FaFacebookF className='mr-5' size={25} /> <span>Continoue With Facebook </span> </button>
-                        <span className='mt-3 block '>Already a member? <Link href='/login'>Sing In </Link> </span>
+                            <span>Continue With Google </span> </button>
+                        <button
+                        onClick={() => signIn("github",{
+                            callbackUrl: 'http://localhost:3000'
+                        })}
+
+                            className='signupBtn bg-[#4078c0] text-white '><FaGithub className='mr-5' size={25} /> <span>Continue With Github </span> </button>
+
+
+                        <span className='block mt-3 '>Already a member? <Link href='/login'>Sing In </Link> </span>
                     </div>
                 </form>
 
