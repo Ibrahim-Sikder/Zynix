@@ -1,0 +1,3 @@
+.btn {
+    @apply px-6 py-[5px] rounded-sm text-[12px] font-semibold bg-[#00715D] flex items-center;
+  }
