@@ -21,7 +21,7 @@ const Signup = () => {
                 <div className="flex lg:justify-end md:justify-center">
                     <Link href='/register'><span>Create a <b className='border-b-2 border-[#00AB55]'>business account</b> </span></Link>
                 </div>
-                <form className="SignupFormWrap">
+                <div className="SignupFormWrap">
                     <div>
                         <div className="flex items-center">
                             <Input type="text" className="SingleInput" label="First Name " />
@@ -73,7 +73,7 @@ const Signup = () => {
 
                         <span className='block mt-3 '>Already a member? <Link href='/login'>Sing In </Link> </span>
                     </div>
-                </form>
+                </div>
 
 
             </div>
