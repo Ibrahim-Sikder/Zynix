@@ -1,0 +1,29 @@
+.footer {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 0;
+}
+.trendHaven {
+	width: 400px;
+}
+.footer ul li {
+	margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+	.footer {
+		width: 100%;
+		padding: 20px;
+		flex-wrap: wrap;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.footer {
+		display: block;
+		padding: 0 30px;
+	}
+	.trendHaven {
+		width: 100%;
+	}
+}
